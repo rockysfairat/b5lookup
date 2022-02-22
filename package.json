@@ -15,13 +15,6 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@arwes/animation": "^1.0.0-alpha.19",
-    "@arwes/core": "^1.0.0-alpha.19",
-    "@arwes/design": "^1.0.0-alpha.19",
-    "@arwes/sounds": "^1.0.0-alpha.19",
-    "@emotion/css": "^11.7.1",
-    "@emotion/react": "^11.8.1",
-    "animejs": "^3.2.1",
     "arwes": "^1.0.0-alpha.5",
     "eslint": "8.9.0",
     "eslint-config-next": "12.1.0",

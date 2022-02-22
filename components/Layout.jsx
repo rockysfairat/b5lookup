@@ -1,9 +1,10 @@
 // Import:
 import jss from "jss";
 import preset from "jss-preset-default";
+import dynamic from "next/dynamic";
 
 // Components:
-import Navbar from "./Navbar";
+const Navbar = dynamic(() => import("./Navbar"));
 import Footer from "./Footer";
 
 const Layout = ({ children }) => {
