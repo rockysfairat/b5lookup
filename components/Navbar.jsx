@@ -1,42 +1,54 @@
-import jss from "jss";
-import preset from "jss-preset-default";
-import { useEffect } from "react";
+import { menu } from "../data/data";
+import Link from "next/link";
 
 const Navbar = () => {
-  jss.setup(preset());
-  const styles = {
-    nav: {
-      width: "100%",
-      outline: "red solid 2px",
-      background: "#1E1E1E",
-    },
-    ul: {
-      listStyle: "none",
-      display: "flex",
-    },
-    li: {
-      display: "block",
-      outline: "3px green dotted",
-      margin: 5,
-      padding: 5,
-      fontSize: "1.5rem",
-      color: "#fff",
-    },
-  };
-  const { classes } = jss.createStyleSheet(styles).attach();
-
-  useEffect(() => {
-    let test = document.getElementsByTagName("li");
-    console.log(test[0]);
-  }, []);
-
   return (
-    <nav className={classes.nav}>
-      <ul className={classes.ul}>
-        <li className={classes.li}>Item 1</li>
-        <li className={classes.li}>Item 2</li>
-        <li className={classes.li}>Item 3</li>
+    <nav>
+      <ul>
+        {menu.map((menuItem) => (
+          <li key={menuItem.text}>
+            <Link href={menuItem.link}>
+              <a>{menuItem.text}</a>
+            </Link>
+          </li>
+        ))}
       </ul>
+      <style jsx>{`
+        nav {
+          background: #1e1e1e;
+          position: relative;
+          z-index: 1;
+        }
+        ul {
+          list-style: none;
+          display: flex;
+          outline: blue 2px dashed;
+          z-index: 2;
+        }
+        li {
+          margin: 5px;
+          padding: 5px;
+          font-size: 1.5rem;
+          position: relative;
+          background: red;
+          z-index: 3;
+          display: flex;
+        }
+        li:before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: green;
+          z-index: 1;
+          top: -10px;
+          left: -10px;
+        }
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+      `}</style>
     </nav>
   );
 };
