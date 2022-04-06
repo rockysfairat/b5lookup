@@ -9,12 +9,11 @@ const Footer = () => {
         {`
           footer {
             background: #43b116;
-            position: absolute;
-            bottom: 0px;
             width: 100%;
           }
           p {
             font-size: 1rem;
+            margin: 0px;
           }
           a {
             text-decoration: none;

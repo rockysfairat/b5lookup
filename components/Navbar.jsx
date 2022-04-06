@@ -22,7 +22,6 @@ const Navbar = () => {
         ul {
           list-style: none;
           display: flex;
-          outline: blue 2px dashed;
           z-index: 2;
         }
         li {

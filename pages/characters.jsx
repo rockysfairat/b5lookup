@@ -26,7 +26,7 @@ const Characters = () => {
           article {
             outline: red solid 3px;
             width: 25%;
-            margin: 10px;
+            margin: 1vw;
           }
         `}
       </style>
