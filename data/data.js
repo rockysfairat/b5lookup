@@ -17,7 +17,7 @@ export const characters = [
   {
     name: "Jeffrey Sinclair / Valen",
     race: "Human",
-    photo: "../images/jeffery-sinclair.jpg",
+    photo: "/images/jeffery-sinclair.jpg",
     playedByName: "Michael O'Hare",
     playedByLink: "https://www.imdb.com/name/nm0641365/",
     isMain: true,
