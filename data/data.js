@@ -17,7 +17,7 @@ export const characters = [
   {
     name: "Jeffrey Sinclair / Valen",
     race: "Human",
-    photo: "/images/jeffery-sinclair.jpg",
+    photo: "/images/jefferysinclair.jpg",
     playedByName: "Michael O'Hare",
     playedByLink: "https://www.imdb.com/name/nm0641365/",
     isMain: true,
@@ -25,7 +25,7 @@ export const characters = [
   {
     name: "John Sheridan",
     race: "Human",
-    photo: "",
+    photo: "/images/john-sheridan.jpg",
     playedByName: "Bruce Boxleitner",
     playedByLink: "https://www.imdb.com/name/nm0000310/",
     isMain: true,
@@ -33,7 +33,7 @@ export const characters = [
   {
     name: "Michael Garibaldi",
     race: "Human",
-    photo: "",
+    photo: "/images/michael-garibaldi.jpg",
     playedByName: "Jerry Doyle",
     playedByLink: "https://www.imdb.com/name/nm0236381/",
     isMain: true,
@@ -41,7 +41,7 @@ export const characters = [
   {
     name: "Susan Ivanova",
     race: "Human",
-    photo: "",
+    photo: "/images/susanivanova.jpg",
     playedByName: "Claudia Christian",
     playedByLink: "https://www.imdb.com/name/nm0160004/",
     isMain: true,
@@ -49,7 +49,7 @@ export const characters = [
   {
     name: "Stephen Franklin",
     race: "Human",
-    photo: "",
+    photo: "/images/Stephen-Franklin-babylon-5-11013756-247-350.jpg",
     playedByName: "Richard Biggs",
     playedByLink: "https://www.imdb.com/name/nm0081863/",
     isMain: true,
@@ -57,7 +57,7 @@ export const characters = [
   {
     name: "Delenn",
     race: "Mimbari",
-    photo: "",
+    photo: "/images/delenn.jpg",
     playedByName: "Mira Furlan",
     playedByLink: "https://www.imdb.com/name/nm0001245/",
     isMain: true,
@@ -65,7 +65,7 @@ export const characters = [
   {
     name: "Lennier",
     race: "Mimbari",
-    photo: "",
+    photo: "/images/lennier.jpeg",
     playedByName: "Bill Mumy",
     playedByLink: "https://www.imdb.com/name/nm0612621/",
     isMain: false,
@@ -73,7 +73,7 @@ export const characters = [
   {
     name: "Londo Mollari",
     race: "Centauri",
-    photo: "",
+    photo: "/images/Londo-Mollari.jpg",
     playedByName: "Peter Jurasik",
     playedByLink: "https://www.imdb.com/name/nm0432867/",
     isMain: true,
@@ -81,7 +81,7 @@ export const characters = [
   {
     name: "Vir Cotto",
     race: "Centauri",
-    photo: "",
+    photo: "/images/Vir_Cotto.jpg",
     playedByName: "Stephen Furst",
     playedByLink: "https://www.imdb.com/name/nm0299122/",
     isMain: false,
@@ -89,7 +89,7 @@ export const characters = [
   {
     name: "G'Kar",
     race: "Narn",
-    photo: "",
+    photo: "/images/GKar.jpg",
     playedByName: "Andreas Katsulas",
     playedByLink: "https://www.imdb.com/name/nm0441537/",
     isMain: true,
@@ -97,7 +97,7 @@ export const characters = [
   {
     name: "Na'Toth",
     race: "Narn",
-    photo: "",
+    photo: "/images/NaToth_01.png",
     playedByName: "Mary Kay Adams",
     playedByLink: "https://www.imdb.com/name/nm0011198/",
     isMain: false,
@@ -105,7 +105,7 @@ export const characters = [
   {
     name: "Alfred Bester",
     race: "Human",
-    photo: "",
+    photo: "/images/bester.jpg",
     playedByName: "Walter Koenig",
     playedByLink: "https://www.imdb.com/name/nm0000479/",
     isMain: false,
@@ -113,7 +113,7 @@ export const characters = [
   {
     name: "Talia Winters",
     race: "Human",
-    photo: "",
+    photo: "/images/Talia_Winters.jpg",
     playedByName: "Andrea Thompson",
     playedByLink: "https://www.imdb.com/name/nm0005487/",
     isMain: false,
@@ -121,7 +121,7 @@ export const characters = [
   {
     name: "Lyta Alexander",
     race: "Human",
-    photo: "",
+    photo: "/images/Lyta_Alexander.jpg",
     playedByName: "Patricia Tallman",
     playedByLink: "https://www.imdb.com/name/nm0848191/",
     isMain: false,
@@ -129,17 +129,17 @@ export const characters = [
   {
     name: "Marcus Cole",
     race: "Human",
-    photo: "",
+    photo: "/images/MarcusCole.jpg",
     playedByName: "Jason Carter",
     playedByLink: "https://www.imdb.com/name/nm0141682/",
     isMain: false,
   },
   {
-    name: "Test",
-    race: "Human",
-    photo: "",
-    playedByName: "MiTets",
-    playedByLink: "https://w",
+    name: "Kosh",
+    race: "Vorlon",
+    photo: "/images/kosh.png",
+    playedByName: "Ardwight Chamberlain",
+    playedByLink: "https://www.imdb.com/name/nm0150140/",
     isMain: false,
   },
   {

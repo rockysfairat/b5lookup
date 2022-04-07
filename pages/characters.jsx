@@ -10,12 +10,7 @@ const Characters = () => {
           <Link href="/characters/[id]" as={`/characters/character`}>
             <article key={character.name}>
               <h2>{character.name}</h2>
-              <img
-                src={character.photo}
-                alt={character.name}
-                width="64"
-                height="64"
-              />
+              <img src={character.photo} alt={character.name} />
               <p>{character.race}</p>
               <p>Played by:</p>{" "}
               <a href={character.playedByLink}>{character.playedByName}</a>
@@ -31,6 +26,11 @@ const Characters = () => {
             display: flex;
             justify-content: space-evenly;
             flex-wrap: wrap;
+          }
+          img {
+            object-fit: cover;
+            width: 120px;
+            height: 150px;
           }
           article {
             outline: red solid 3px;
