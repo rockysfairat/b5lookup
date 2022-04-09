@@ -24,8 +24,10 @@ const Characters = () => {
           section {
             width: 100%;
             display: flex;
-            justify-content: space-evenly;
             flex-wrap: wrap;
+            justify-content: space-between;
+            box-sizing: border-box;
+            padding: 0 10px 0 10px;
           }
           img {
             object-fit: cover;
@@ -33,9 +35,19 @@ const Characters = () => {
             height: 150px;
           }
           article {
-            outline: red solid 3px;
             width: 25%;
-            margin: 1vw;
+            margin: 1vw 3vw 1.5vw 3vw;
+            background: gold;
+          }
+          @media screen and (max-width: 800px) {
+            article {
+              width: 90%;
+              margin: 1vw;
+            }
+            section {
+              justify-content: space-around;
+              padding: 0;
+            }
           }
         `}
       </style>
