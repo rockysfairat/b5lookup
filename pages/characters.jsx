@@ -10,7 +10,13 @@ const Characters = () => {
           <Link href="/characters/[id]" as={`/characters/character`}>
             <article key={character.name}>
               <h2>{character.name}</h2>
-              <img src={character.photo} alt={character.name} />
+              <Image
+                src={character.photo}
+                alt={character.name}
+                width="100"
+                height="120"
+                objectFit="cover"
+              />
               <p>{character.race}</p>
               <p>Played by:</p>{" "}
               <a href={character.playedByLink}>{character.playedByName}</a>
@@ -29,11 +35,11 @@ const Characters = () => {
             box-sizing: border-box;
             padding: 0 10px 0 10px;
           }
-          img {
-            object-fit: cover;
-            width: 120px;
-            height: 150px;
-          }
+          // img {
+          //   object-fit: cover;
+          //   width: 120px;
+          //   height: 150px;
+          // }
           article {
             width: 25%;
             margin: 1vw 3vw 1.5vw 3vw;
