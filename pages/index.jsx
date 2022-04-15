@@ -1,6 +1,12 @@
+import { useEffect } from "react";
 import Image from "next/image";
+import getAllCharactersData from "../utils/getAllCharactersData";
 
 const Home = () => {
+  useEffect(() => {
+    getAllCharactersData();
+  }, []);
+
   return (
     <div className="wrapper">
       <h1>Test</h1>
@@ -13,13 +19,6 @@ const Home = () => {
           }
         `}
       </style>
-      <style jsx global>{`
-        body {
-          box-sizing: border-box;
-          margin: 0px;
-          padding: 0px;
-        }
-      `}</style>
     </div>
   );
 };

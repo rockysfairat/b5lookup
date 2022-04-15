@@ -1,13 +1,17 @@
-import { characters } from "../data/data";
+// React hooks:
+import { useId } from "react";
+// Next components:
 import Image from "next/image";
 import Link from "next/link";
+// Data:
+import { characters } from "../data/data";
 
 const Characters = () => {
   return (
     <>
       <section>
         {characters.map((character) => (
-          <Link href="/characters/[id]" as={`/characters/character`}>
+          <Link href="/characters/[character]" as={`/characters/character`}>
             <article key={character.name}>
               <h2>{character.name}</h2>
               <Image
@@ -54,15 +58,6 @@ const Characters = () => {
               justify-content: space-around;
               padding: 0;
             }
-          }
-        `}
-      </style>
-      <style jsx global>
-        {`
-          body {
-            box-sizing: border-box;
-            margin: 0px;
-            padding: 0px;
           }
         `}
       </style>

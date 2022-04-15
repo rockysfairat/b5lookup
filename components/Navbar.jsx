@@ -1,12 +1,17 @@
-import { menu } from "../data/data";
+// React hooks:
+import { useId } from "react";
+// Next components:
 import Link from "next/link";
+// Data:
+import { menu } from "../data/data";
 
 const Navbar = () => {
+  const id = useId();
   return (
     <nav>
       <ul>
         {menu.map((menuItem) => (
-          <li key={menuItem.text}>
+          <li key={id + menuItem.text}>
             <Link href={menuItem.link}>
               <a>{menuItem.text}</a>
             </Link>
