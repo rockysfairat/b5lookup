@@ -1,33 +1,33 @@
-// React hooks:
-import { useId } from "react";
+import getAllCharactersData from "../utils/getAllCharactersData";
 // Next components:
 import Image from "next/image";
 import Link from "next/link";
 // Data:
 import { characters } from "../data/data";
 
-const Characters = () => {
+const Characters = ({ allCharacters }) => {
   return (
     <>
       <section>
-        {characters.map((character) => (
-          <Link href="/characters/[character]" as={`/characters/character`}>
-            <article key={character.name}>
-              <h2>{character.name}</h2>
-              <Image
-                src={character.photo}
-                alt={character.name}
-                width="100"
-                height="120"
-                objectFit="cover"
-              />
-              <p>{character.race}</p>
-              <p>Played by:</p>{" "}
-              <a href={character.playedByLink}>{character.playedByName}</a>
-              {character.isMain ? <p>Main character</p> : null}
-            </article>
-          </Link>
-        ))}
+        {characters.map(
+          ({ name, photo, race, playedByLink, playedByName, isMain }) => (
+            <Link href="/characters/[character]" as={`/characters/character`}>
+              <article key={name}>
+                <h2>{name}</h2>
+                <Image
+                  src={photo}
+                  alt={name}
+                  width="100"
+                  height="120"
+                  objectFit="cover"
+                />
+                <p>{race}</p>
+                <p>Played by:</p> <a href={playedByLink}>{playedByName}</a>
+                {isMain ? <p>Main character</p> : null}
+              </article>
+            </Link>
+          )
+        )}
       </section>
       <style jsx>
         {`
@@ -64,5 +64,14 @@ const Characters = () => {
     </>
   );
 };
+
+export async function getStaticProps() {
+  const allCharacters = getAllCharactersData();
+  return {
+    props: {
+      allCharacters,
+    },
+  };
+}
 
 export default Characters;

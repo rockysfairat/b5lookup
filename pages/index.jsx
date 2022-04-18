@@ -1,12 +1,7 @@
 import { useEffect } from "react";
 import Image from "next/image";
-import getAllCharactersData from "../utils/getAllCharactersData";
 
 const Home = () => {
-  useEffect(() => {
-    getAllCharactersData();
-  }, []);
-
   return (
     <div className="wrapper">
       <h1>Test</h1>
