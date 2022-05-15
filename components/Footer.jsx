@@ -10,6 +10,8 @@ const Footer = () => {
           footer {
             background: #43b116;
             width: 100%;
+            bottom: 0;
+            height: 80px;
           }
           p {
             font-size: 1rem;

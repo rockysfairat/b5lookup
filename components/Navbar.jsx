@@ -34,23 +34,13 @@ const Navbar = () => {
           padding: 5px;
           font-size: 1.5rem;
           position: relative;
-          background: red;
+          background: #12a7f7;
           z-index: 3;
           display: flex;
         }
-        li:before {
-          content: "";
-          position: absolute;
-          width: 20px;
-          height: 20px;
-          background: green;
-          z-index: 1;
-          top: -10px;
-          left: -10px;
-        }
         a {
           text-decoration: none;
-          color: #fff;
+          color: #000;
         }
       `}</style>
     </nav>

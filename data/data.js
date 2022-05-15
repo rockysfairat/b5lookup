@@ -22,15 +22,18 @@ export const characters = [
     playedByName: "Michael O'Hare",
     playedByLink: "https://www.imdb.com/name/nm0641365/",
     isMain: true,
+    summary: "The original commander of Babylon 5",
   },
   {
-    id: "John Sheridan",
+    id: "JohnSheridan",
     name: "John Sheridan",
     race: "Human",
     photo: "/images/john-sheridan.jpg",
     playedByName: "Bruce Boxleitner",
     playedByLink: "https://www.imdb.com/name/nm0000310/",
     isMain: true,
+    summary:
+      "Jeffrey Sinclair's replacement as Commander of Babylon 5. Under his leadership, Babylon 5 seceded from the Earth Alliance, the second Shadow war was resolved, and President Morgan Clark was overthrown, after which Sheridan became the first President of the Interstellar Alliance. ",
   },
   {
     id: "MichaelGaribaldi",
@@ -40,6 +43,8 @@ export const characters = [
     playedByName: "Jerry Doyle",
     playedByLink: "https://www.imdb.com/name/nm0236381/",
     isMain: true,
+    summary:
+      "The Chief of Security for Babylon 5 from 2257 to 2261 as a member of Earthforce security (attaining clearance ultraviolet alpha), Head of Covert Intelligence for the Interstellar Alliance for most of 2262 and from September 2262 onwards, was CEO of Edgars Industries",
   },
   {
     id: "SusanIvanova",
@@ -49,6 +54,8 @@ export const characters = [
     playedByName: "Claudia Christian",
     playedByLink: "https://www.imdb.com/name/nm0160004/",
     isMain: true,
+    summary:
+      "The second in command of Babylon 5 from February 2258 to December 2261, serving under both Commander Jeffrey Sinclair and later Captain John Sheridan (in Russian: Сьюзен Иванова, in Hebrew: סוזן איבנובה) ",
   },
   {
     id: "StephenFranklin",
@@ -58,6 +65,8 @@ export const characters = [
     playedByName: "Richard Biggs",
     playedByLink: "https://www.imdb.com/name/nm0081863/",
     isMain: true,
+    summary:
+      "Babylon 5's Chief Medical Officer from 2258 - 2262, having replaced Benjamin Kyle in the post. Franklin then went on to be Head of Xenobiological Research at Earth Dome, once again replacing Benjamin Kyle. Lillian Hobbs replaced him as CMO",
   },
   {
     id: "Delenn",
@@ -67,6 +76,8 @@ export const characters = [
     playedByName: "Mira Furlan",
     playedByLink: "https://www.imdb.com/name/nm0001245/",
     isMain: true,
+    summary:
+      "The Minbari ambassador to Babylon 5 and a founder of the Interstellar Alliance.",
   },
   {
     id: "Lennier",
@@ -76,6 +87,8 @@ export const characters = [
     playedByName: "Bill Mumy",
     playedByLink: "https://www.imdb.com/name/nm0612621/",
     isMain: false,
+    summary:
+      "A Religious Caste Minbari who served as Delenn's diplomatic aide on Babylon 5 before eventually joining the Anla'Shok",
   },
   {
     id: "LondoMollari",
@@ -85,6 +98,8 @@ export const characters = [
     playedByName: "Peter Jurasik",
     playedByLink: "https://www.imdb.com/name/nm0432867/",
     isMain: true,
+    summary:
+      "The Centauri delegation liaison to Earth in 2243, ambassador to Babylon 5 from 2256 to 2262, Prime Minister of the Centauri Republic from 2261 to 2262, and Emperor of the Centauri Republic from 2262 to 2278 (Earth calendar)",
   },
   {
     id: "VirCotto",
@@ -94,6 +109,8 @@ export const characters = [
     playedByName: "Stephen Furst",
     playedByLink: "https://www.imdb.com/name/nm0299122/",
     isMain: false,
+    summary:
+      "A Centauri male from a minor noble family who served as an assistant to Ambassador Londo Mollari and later became Emperor of the Centauri Republic",
   },
   {
     id: "GKar",
@@ -103,6 +120,7 @@ export const characters = [
     playedByName: "Andreas Katsulas",
     playedByLink: "https://www.imdb.com/name/nm0441537/",
     isMain: true,
+    summary: `The first Narn ambassador to Babylon 5 and would become renowned as the author of the Book of G'Kar and "Sir G'Kar of the New Round Table"`,
   },
   {
     id: "NaToth",
@@ -112,6 +130,7 @@ export const characters = [
     playedByName: "Mary Kay Adams",
     playedByLink: "https://www.imdb.com/name/nm0011198/",
     isMain: false,
+    summary: "A Narn diplomatic attaché and daughter of Counsellor Shu'Tot",
   },
   {
     id: "AlfredBester",
@@ -121,6 +140,8 @@ export const characters = [
     playedByName: "Walter Koenig",
     playedByLink: "https://www.imdb.com/name/nm0000479/",
     isMain: false,
+    summary:
+      "A senior Psi Corps officer and one of the more notorious Psi Cops in Level 12 Investigations",
   },
   {
     id: "TaliaWinters",
@@ -130,6 +151,8 @@ export const characters = [
     playedByName: "Andrea Thompson",
     playedByLink: "https://www.imdb.com/name/nm0005487/",
     isMain: false,
+    summary:
+      "A human telepath, rated P5 and the second Psi Corps licensed commercial telepath assigned to Babylon 5",
   },
   {
     id: "LytaAlexander",
@@ -139,6 +162,8 @@ export const characters = [
     playedByName: "Patricia Tallman",
     playedByLink: "https://www.imdb.com/name/nm0848191/",
     isMain: false,
+    summary:
+      "A Human telepath, assigned by the Psi Corps to Babylon 5 to serve as the station's licensed commercial telepath. She was later physically altered by the Vorlons",
   },
   {
     id: "MarcusCole",
@@ -148,6 +173,8 @@ export const characters = [
     playedByName: "Jason Carter",
     playedByLink: "https://www.imdb.com/name/nm0141682/",
     isMain: false,
+    summary:
+      "A leading member of the Rangers and a key member of the Army of Light during the Second Shadow War",
   },
   {
     id: "Kosh",
@@ -157,6 +184,7 @@ export const characters = [
     playedByName: "Ardwight Chamberlain",
     playedByLink: "https://www.imdb.com/name/nm0150140/",
     isMain: false,
+    summary: "The Vorlon Ambassador to Babylon 5",
   },
   {
     id: "Lorien",
@@ -166,6 +194,8 @@ export const characters = [
     playedByName: "Wayne Alexander",
     playedByLink: "https://www.imdb.com/name/nm0018795/",
     isMain: false,
+    summary:
+      "The very first of the First Ones, and the very first of them to gain sentience. His race was born naturally immortal, until later generations began to age and die",
   },
   {
     id: "Morden",
@@ -175,6 +205,8 @@ export const characters = [
     playedByName: "Ed Wasser",
     playedByLink: "https://www.imdb.com/name/nm0913662/",
     isMain: false,
+    summary:
+      "A Human agent of the Shadows and a former member of the ill-fated Icarus mission",
   },
   {
     id: "ByronGordon",
@@ -184,6 +216,8 @@ export const characters = [
     playedByName: "Robin Atkin Downes",
     playedByLink: "https://www.imdb.com/name/nm0235960/",
     isMain: false,
+    summary:
+      "A rogue human telepath and former Psi Cop whose name later would become a rallying cry of the Telepath War",
   },
   {
     id: "Neroon",
@@ -193,6 +227,8 @@ export const characters = [
     playedByName: "John Vickery",
     playedByLink: "https://www.imdb.com/name/nm0896043/",
     isMain: false,
+    summary:
+      "A member of the Minbari Warrior Caste from the Star Riders clan, a representative of the Council of Caste Elders[1] and later a member of the Grey Council",
   },
   {
     id: "EmperorCartagia",
@@ -202,6 +238,8 @@ export const characters = [
     playedByName: "Wortham Krimmer",
     playedByLink: "https://www.imdb.com/name/nm0471337/",
     isMain: false,
+    summary:
+      "An emperor of the Centauri Republic from 2259 until early 2261. Near the end of the Second Shadow War, Cartagia's self-aggrandizement and madness brought Centauri Prime to the brink of annihilation by the Vorlons",
   },
   {
     id: "ElizabethLochley",
@@ -211,6 +249,8 @@ export const characters = [
     playedByName: "Tracy Scoggins",
     playedByLink: "https://www.imdb.com/name/nm0001712/",
     isMain: false,
+    summary:
+      "Became the commanding officer of Babylon 5 in 2262, replacing her ex-husband John Sheridan as CO of Babylon 5 when he assumed the Presidency of the Interstellar Alliance. Personally chosen by Sheridan as his replacement, the two knew each other from his days at the Earthforce Academy, and as such he felt that she was capable of dealing with the kind of problems that would arise on Babylon 5",
   },
   {
     id: "ZackAllan",
@@ -220,6 +260,7 @@ export const characters = [
     playedByName: "Jeff Conaway",
     playedByLink: "https://www.imdb.com/name/nm0001063/",
     isMain: false,
+    summary: "A member of Babylon 5 Security",
   },
   {
     id: "WarrenKeffer",
@@ -229,6 +270,8 @@ export const characters = [
     playedByName: "Robert Rusler",
     playedByLink: "https://www.imdb.com/name/nm0750852/",
     isMain: false,
+    summary:
+      "A male Human and Earth Alliance pilot. He served as a Starfury pilot on Babylon 5 and a member of Zeta Wing. After the death of Zeta Leader Ray Galus, he became the new Leader. He was killed in 2259 by a Shadow Vessel",
   },
   {
     id: "LaurelTakashima",
@@ -238,6 +281,8 @@ export const characters = [
     playedByName: "Tamlyn Tomita",
     playedByLink: "https://www.imdb.com/name/nm0000674/",
     isMain: false,
+    summary:
+      "The first officer of Babylon 5 in 2257, under Commander Jeffrey Sinclair",
   },
   {
     id: "DavidCorwin",
@@ -247,6 +292,8 @@ export const characters = [
     playedByName: "Josh Coxx",
     playedByLink: "https://www.imdb.com/name/nm0185104/",
     isMain: false,
+    summary:
+      "A human and Earthforce officer. He spent years working as a technician in Babylon 5's C'n'C. Eventually becoming B5's Executive Officer under Captain Elizabeth Lochley, he also worked as the liaison between the Earth Alliance and the ISA personnel on the station",
   },
   {
     id: "WilliamHague",
@@ -256,6 +303,8 @@ export const characters = [
     playedByName: "Robert Foxworth",
     playedByLink: "https://www.imdb.com/name/nm0289343/",
     isMain: false,
+    summary:
+      "A Human Earthforce officer. He became chairman of Earthforce's Joint Chiefs of Staff, and, later, the first leader of the Earth Alliance Resistance against the authoritarian regime of Earth Alliance President Morgan Clark",
   },
   {
     id: "Drazi",
@@ -265,5 +314,7 @@ export const characters = [
     playedByName: "Kim Strauss",
     playedByLink: "https://www.imdb.com/name/nm0833836/",
     isMain: false,
+    summary:
+      "A sentient race and one of the Younger Races. The Drazi Freehold was a member of the League of Non-Aligned Worlds and later the Interstellar Alliance",
   },
 ];

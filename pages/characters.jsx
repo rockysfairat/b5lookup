@@ -1,18 +1,17 @@
-import getAllCharactersData from "../utils/getAllCharactersData";
 // Next components:
 import Image from "next/image";
 import Link from "next/link";
 // Data:
 import { characters } from "../data/data";
 
-const Characters = ({ allCharacters }) => {
+const Characters = () => {
   return (
     <>
       <section>
         {characters.map(
-          ({ name, photo, race, playedByLink, playedByName, isMain }) => (
-            <Link href="/characters/[character]" as={`/characters/character`}>
-              <article key={name}>
+          ({ id, name, photo, race, playedByLink, playedByName, isMain }) => (
+            <Link href={`/characters/${id}`}>
+              <article key={id}>
                 <h2>{name}</h2>
                 <Image
                   src={photo}
@@ -39,15 +38,10 @@ const Characters = ({ allCharacters }) => {
             box-sizing: border-box;
             padding: 0 10px 0 10px;
           }
-          // img {
-          //   object-fit: cover;
-          //   width: 120px;
-          //   height: 150px;
-          // }
           article {
             width: 25%;
             margin: 1vw 3vw 1.5vw 3vw;
-            background: gold;
+            background: #12a7f7;
           }
           @media screen and (max-width: 800px) {
             article {
@@ -64,14 +58,5 @@ const Characters = ({ allCharacters }) => {
     </>
   );
 };
-
-export async function getStaticProps() {
-  const allCharacters = getAllCharactersData();
-  return {
-    props: {
-      allCharacters,
-    },
-  };
-}
 
 export default Characters;
