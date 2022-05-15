@@ -15,6 +15,7 @@ export const menu = [
 
 export const characters = [
   {
+    id: "JeffreySinclair",
     name: "Jeffrey Sinclair / Valen",
     race: "Human",
     photo: "/images/jefferysinclair.jpg",
@@ -23,6 +24,7 @@ export const characters = [
     isMain: true,
   },
   {
+    id: "John Sheridan",
     name: "John Sheridan",
     race: "Human",
     photo: "/images/john-sheridan.jpg",
@@ -31,6 +33,7 @@ export const characters = [
     isMain: true,
   },
   {
+    id: "MichaelGaribaldi",
     name: "Michael Garibaldi",
     race: "Human",
     photo: "/images/michael-garibaldi.jpg",
@@ -39,6 +42,7 @@ export const characters = [
     isMain: true,
   },
   {
+    id: "SusanIvanova",
     name: "Susan Ivanova",
     race: "Human",
     photo: "/images/susanivanova.jpg",
@@ -47,6 +51,7 @@ export const characters = [
     isMain: true,
   },
   {
+    id: "StephenFranklin",
     name: "Stephen Franklin",
     race: "Human",
     photo: "/images/Stephen-Franklin-babylon-5-11013756-247-350.jpg",
@@ -55,6 +60,7 @@ export const characters = [
     isMain: true,
   },
   {
+    id: "Delenn",
     name: "Delenn",
     race: "Mimbari",
     photo: "/images/delenn.jpg",
@@ -63,6 +69,7 @@ export const characters = [
     isMain: true,
   },
   {
+    id: "Lennier",
     name: "Lennier",
     race: "Mimbari",
     photo: "/images/lennier.jpeg",
@@ -71,6 +78,7 @@ export const characters = [
     isMain: false,
   },
   {
+    id: "LondoMollari",
     name: "Londo Mollari",
     race: "Centauri",
     photo: "/images/Londo-Mollari.jpg",
@@ -79,6 +87,7 @@ export const characters = [
     isMain: true,
   },
   {
+    id: "VirCotto",
     name: "Vir Cotto",
     race: "Centauri",
     photo: "/images/Vir_Cotto.jpg",
@@ -87,6 +96,7 @@ export const characters = [
     isMain: false,
   },
   {
+    id: "GKar",
     name: "G'Kar",
     race: "Narn",
     photo: "/images/GKar.jpg",
@@ -95,6 +105,7 @@ export const characters = [
     isMain: true,
   },
   {
+    id: "NaToth",
     name: "Na'Toth",
     race: "Narn",
     photo: "/images/NaToth_01.png",
@@ -103,6 +114,7 @@ export const characters = [
     isMain: false,
   },
   {
+    id: "AlfredBester",
     name: "Alfred Bester",
     race: "Human",
     photo: "/images/bester.jpg",
@@ -111,6 +123,7 @@ export const characters = [
     isMain: false,
   },
   {
+    id: "TaliaWinters",
     name: "Talia Winters",
     race: "Human",
     photo: "/images/Talia_Winters.jpg",
@@ -119,6 +132,7 @@ export const characters = [
     isMain: false,
   },
   {
+    id: "LytaAlexander",
     name: "Lyta Alexander",
     race: "Human",
     photo: "/images/Lyta_Alexander.jpg",
@@ -127,6 +141,7 @@ export const characters = [
     isMain: false,
   },
   {
+    id: "MarcusCole",
     name: "Marcus Cole",
     race: "Human",
     photo: "/images/MarcusCole.jpg",
@@ -135,6 +150,7 @@ export const characters = [
     isMain: false,
   },
   {
+    id: "Kosh",
     name: "Kosh",
     race: "Vorlon",
     photo: "/images/kosh.png",
@@ -143,6 +159,7 @@ export const characters = [
     isMain: false,
   },
   {
+    id: "Lorien",
     name: "Lorien",
     race: "The First One",
     photo: "/images/lorien.png",
@@ -151,6 +168,7 @@ export const characters = [
     isMain: false,
   },
   {
+    id: "Morden",
     name: "Morden",
     race: "Human",
     photo: "/images/Mr_Morden.jpg",
@@ -159,6 +177,7 @@ export const characters = [
     isMain: false,
   },
   {
+    id: "ByronGordon",
     name: "Byron Gordon",
     race: "Human",
     photo: "/images/Byron.jpg",
@@ -167,6 +186,7 @@ export const characters = [
     isMain: false,
   },
   {
+    id: "Neroon",
     name: "Neroon",
     race: "Minbari",
     photo: "/images/neroon.png",
@@ -175,6 +195,7 @@ export const characters = [
     isMain: false,
   },
   {
+    id: "EmperorCartagia",
     name: "Emperor Cartagia",
     race: "Centauri",
     photo: "/images/cartagia.jpg",
@@ -183,6 +204,7 @@ export const characters = [
     isMain: false,
   },
   {
+    id: "ElizabethLochley",
     name: "Elizabeth Lochley",
     race: "Human",
     photo: "/images/elizabeth_Lochley.jpg",
@@ -191,6 +213,7 @@ export const characters = [
     isMain: false,
   },
   {
+    id: "ZackAllan",
     name: "Zack Allan",
     race: "Human",
     photo: "/images/Zack_Allan.jpg",
@@ -199,6 +222,7 @@ export const characters = [
     isMain: false,
   },
   {
+    id: "WarrenKeffer",
     name: "Warren Keffer",
     race: "Human",
     photo: "/images/WarrenKeffer.jpg",
@@ -207,6 +231,7 @@ export const characters = [
     isMain: false,
   },
   {
+    id: "LaurelTakashima",
     name: "Laurel Takashima",
     race: "Human",
     photo: "/images/takashima.jpg",
@@ -215,6 +240,7 @@ export const characters = [
     isMain: false,
   },
   {
+    id: "DavidCorwin",
     name: "Lt. David Corwin",
     race: "Human",
     photo: "/images/DavidCorwin.jpg",
@@ -223,6 +249,7 @@ export const characters = [
     isMain: false,
   },
   {
+    id: "WilliamHague",
     name: "William Hague",
     race: "Human",
     photo: "/images/WilliamHague.png",
@@ -231,6 +258,7 @@ export const characters = [
     isMain: false,
   },
   {
+    id: "Drazi",
     name: "Drazi",
     race: "Drazi",
     photo: "/images/drazi.jpg",
