@@ -18,10 +18,12 @@ const Home = () => {
         {`
           .wrapper {
             box-sizing: border-box;
-            height: 80vh;
+            height: 100%;
             background: url(../images/home_bg.jpg);
             background-position: center;
             background-size: cover;
+            background-repeat: no-repeat;
+            background-size: 2000px auto;
           }
           section {
             position: absolute;

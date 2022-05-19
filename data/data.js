@@ -8,8 +8,8 @@ export const menu = [
     link: "/characters",
   },
   {
-    text: "Item 2 from data.js",
-    link: "",
+    text: "B5 Links",
+    link: "/links",
   },
 ];
 

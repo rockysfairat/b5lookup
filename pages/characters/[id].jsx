@@ -21,15 +21,15 @@ const Character = () => {
           <p>main character</p>
           <style jsx>{`
             .isMain {
-              background-color: green;
-              color: white;
+              background-color: #ffb703;
+              color: #023047;
               height: 90px;
-              left: -5px;
+              left: 20px;
               margin: 0;
               position: absolute;
-              top: -15px;
+              top: 110px;
               width: 90px;
-              z-index: 2;
+              z-index: 3;
               display: flex;
               align-items: center;
               justify-content: center;
@@ -56,21 +56,20 @@ const Character = () => {
     <>
       <article>
         <div className="characterCard">
+          {isTheCharacterMain()}
           <div className="imgWrapper">
-            {isTheCharacterMain()}
-
             <Image
               src={character[0].photo}
               alt={character[0].name}
-              width="250"
-              height="420"
+              width="300"
+              height="370"
               objectFit="cover"
             />
           </div>
 
           <div className="characterSummary">
             <h2>{character[0].name}</h2>
-            <p>{character[0].summary}</p>
+            <p className="txtSummary">{character[0].summary}</p>
             <p>Race: {character[0].race}</p>
             <span>
               Played by{" "}
@@ -80,26 +79,54 @@ const Character = () => {
             </span>
           </div>
         </div>
+        <div className="tweetsWrapper">
+          <p>Test</p>
+        </div>
       </article>
       <style jsx>
         {`
           article {
-            height: 100hv;
+            margin-top: 100px;
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            width: 100%;
           }
           .characterCard {
-            outline: red dotted 3px;
-            background: #12a7f7;
-            width: 50%;
+            background: #219ebc;
             display: flex;
             justify-content: space-evenly;
-            margin-top: 50px;
+            width: 700px;
+            margin-left: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: rgba(18, 167, 247, 0.45) 1.95px 1.95px 2.6px;
           }
           .imgWrapper {
+            width: 300px;
+            height: 300px;
             position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: solid 5px #023047;
           }
           .characterSummary {
             width: 50%;
             padding: 0px 10px 0px 10px;
+          }
+          .txtSummary {
+            font-size: 1.2rem;
+          }
+          .tweetsWrapper {
+            outline: green solid 2px;
+            width: 50px;
+          }
+          @media screen and (max-width: 900px) {
+            article {
+              grid-template-columns: 1fr;
+            }
           }
         `}
       </style>

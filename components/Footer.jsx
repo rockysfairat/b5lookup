@@ -8,24 +8,16 @@ const Footer = () => {
       <style jsx>
         {`
           footer {
-            background: #43b116;
-            width: 100%;
+            background: #219ebc;
             bottom: 0;
-            height: 80px;
+            height: 20px;
+            position: fixed;
+            width: 100%;
           }
+
           p {
             font-size: 1rem;
             margin: 0px;
-          }
-          a {
-            text-decoration: none;
-            color: #000;
-          }
-          a:hover {
-            text-decoration: underline;
-          }
-          a:visited {
-            color: #000;
           }
         `}
       </style>
