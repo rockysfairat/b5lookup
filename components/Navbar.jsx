@@ -61,6 +61,9 @@ const Navbar = () => {
           color: #000;
           z-index: 2;
         }
+
+        // LI elements decoration:
+
         .deco1,
         .deco2,
         .deco3,
@@ -88,6 +91,19 @@ const Navbar = () => {
           background: gold;
           bottom: 0;
           right: 0;
+        }
+
+        // LI elements animation:
+
+        @keyframes deco1_move {
+          from {
+            top: 0;
+            left: 0;
+          }
+          to {
+            top: 50%;
+            left: 50%;
+          }
         }
       `}</style>
     </nav>

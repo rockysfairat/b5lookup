@@ -3,7 +3,7 @@ import { characters } from "../../data/data";
 import { useRouter } from "next/router";
 import Image from "next/image";
 // React components:
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Character = () => {
   const router = useRouter();
@@ -13,6 +13,37 @@ const Character = () => {
   const character = characters.filter((char) => {
     return char.id == id;
   });
+
+  // Fetching Tweets:
+
+  // const [fetchedTweets, setFetchedTweets] = [];
+
+  // const token = process.env.BEARER_TOKEN;
+  // const url = "https://api.twitter.com/2/tweets/search/recent?query=";
+
+  // async function getTweets() {
+  //   const params = {
+  //     query: "%22Babylon%205%22",
+  //     "tweet.fields": "text",
+  //   };
+  //   const res = await fetch(url + params.query, {
+  //     method: "GET",
+  //     mode: "no-cors",
+  //     headers: {
+  //       Autorization: `Bearer ${token}`,
+  //     },
+  //   });
+  //   if (res.ok) {
+  //     let json = await res.json();
+  //   } else {
+  //     alert("HTTP-err: " + res.status);
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   setFetchedTweets = getTweets();
+  //   console.log(fetchedTweets);
+  // }, []);
 
   function isTheCharacterMain() {
     if (character[0].isMain) {
