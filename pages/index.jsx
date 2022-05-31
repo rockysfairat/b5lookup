@@ -19,7 +19,7 @@ const Home = () => {
           .wrapper {
             box-sizing: border-box;
             height: 100%;
-            background: url(../images/home_bg.jpg);
+            background: url(../images/B5background.gif);
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
