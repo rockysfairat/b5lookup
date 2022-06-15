@@ -52,58 +52,31 @@ const Navbar = () => {
           display: flex;
           font-size: 1.5rem;
           margin: 5px;
-          padding: 5px;
           position: relative;
-          overflow: hidden;
+        }
+        li::before,
+        li::after {
+          content: "";
+          width: 15px;
+          height: 10px;
+          background: #000;
+          position: absolute;
+          transform: rotateZ(45deg);
+        }
+        li::before {
+          top: -4px;
+          right: -7px;
+          background: #000;
+          // display: none;
+        }
+        li::after {
+          bottom: -4px;
+          left: -6px;
         }
         a {
           text-decoration: none;
           color: #000;
-          z-index: 2;
-        }
-
-        // LI elements decoration:
-
-        .deco1,
-        .deco2,
-        .deco3,
-        .deco4 {
-          width: 50%;
-          height: 50%;
-          position: absolute;
-        }
-        .deco1 {
-          background: red;
-          top: 0;
-          left: 0;
-        }
-        .deco2 {
-          background: green;
-          top: 0;
-          right: 0;
-        }
-        .deco3 {
-          background: blue;
-          bottom: 0;
-          left: 0;
-        }
-        .deco4 {
-          background: gold;
-          bottom: 0;
-          right: 0;
-        }
-
-        // LI elements animation:
-
-        @keyframes deco1_move {
-          from {
-            top: 0;
-            left: 0;
-          }
-          to {
-            top: 50%;
-            left: 50%;
-          }
+          padding: 5px 10px 5px 10px;
         }
       `}</style>
     </nav>
