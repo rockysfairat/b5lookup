@@ -67,7 +67,7 @@ const Navbar = () => {
           top: -4px;
           right: -7px;
           background: #000;
-          // display: none;
+          display: none;
         }
         li::after {
           bottom: -4px;
