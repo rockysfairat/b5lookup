@@ -11,6 +11,10 @@ export const menu = [
     text: "B5 Links",
     link: "/links",
   },
+  {
+    text: "Recent tweets",
+    link: "/tweets",
+  },
 ];
 
 export const characters = [
@@ -23,6 +27,7 @@ export const characters = [
     playedByLink: "https://www.imdb.com/name/nm0641365/",
     isMain: true,
     summary: "The original commander of Babylon 5",
+    searchQuery: "%22Jeffrey%20Sinclair%22",
   },
   {
     id: "JohnSheridan",
@@ -316,5 +321,26 @@ export const characters = [
     isMain: false,
     summary:
       "A sentient race and one of the Younger Races. The Drazi Freehold was a member of the League of Non-Aligned Worlds and later the Interstellar Alliance",
+  },
+];
+
+export const b5links = [
+  {
+    id: "TheBabylonProject",
+    title: "The Babylon Project - WIKI",
+    url: "https://babylon5.fandom.com/wiki/Main_Page",
+    img: "/images/b5project.png",
+  },
+  {
+    id: "ADreamGivenForm",
+    title: "A Dream Given Form: A Babylon-5 Podcast",
+    url: "https://podcasts.apple.com/us/podcast/a-dream-given-form-a-babylon-5-podcast/id1611981020",
+    img: "/images/ADreamGivenFormPodcast.png",
+  },
+  {
+    id: "MessageArchive",
+    title: "J. Michael Straczynski's Message Archive",
+    url: "https://www.jmsnews.com/messages/archive",
+    img: "/images/JMS.png",
   },
 ];

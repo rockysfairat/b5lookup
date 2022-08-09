@@ -1,15 +1,18 @@
+// Characters data:
 import { characters } from "../../data/data";
 // Next components:
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Link from "next/link";
 // React components:
-import { useEffect } from "react";
-// Display tweets function:
-// import { recentTweets } from "../../backend/tweets";
+import { useEffect, useState } from "react";
 
-const Character = () => {
+const Character = ({ data }) => {
   const router = useRouter();
   const { id } = router.query;
+
+  const [char, setChar] = useState("");
+  console.log(char);
 
   // Extracting the local character data:
   const character = characters.filter((char) => {
@@ -52,6 +55,8 @@ const Character = () => {
 
   useEffect(() => {
     isTheCharacterMain();
+    setChar(character[0].searchQuery);
+    console.log(data);
   }, []);
 
   return (
@@ -82,7 +87,16 @@ const Character = () => {
           </div>
         </div>
         <div className="tweetsWrapper">
-          {/* {recentTweets(character[0].name)} */}
+          {data.data.map(({ id, created_at, text }) => (
+            <Link href={`https://twitter.com/i/web/status/${id}`}>
+              <div className="tweet">
+                <p className="tweetCreatedAt">
+                  {created_at.replace("T", " - ").slice(-24, -5)}
+                </p>{" "}
+                <p>{text}</p>
+              </div>
+            </Link>
+          ))}
         </div>
       </article>
       <style jsx>
@@ -90,44 +104,73 @@ const Character = () => {
           article {
             margin-top: 100px;
             display: grid;
-            grid-template-columns: repeat(2, auto);
+            grid-template-columns: 1fr 2fr;
             width: 100%;
           }
           .characterCard {
             background: #219ebc;
-            display: flex;
-            justify-content: space-evenly;
-            width: 700px;
-            margin-left: 10px;
-            padding: 10px;
             border-radius: 5px;
             box-shadow: rgba(18, 167, 247, 0.45) 1.95px 1.95px 2.6px;
+            display: flex;
+            height: fit-content;
+            justify-content: space-evenly;
+            margin-left: 10px;
+            margin-top: 5px;
+            padding: 10px;
+            width: 700px;
           }
           .imgWrapper {
-            width: 300px;
-            height: 300px;
-            position: relative;
-            overflow: hidden;
-            display: flex;
             align-items: center;
-            justify-content: center;
             border-radius: 50%;
             border: solid 5px #023047;
+            display: flex;
+            height: 300px;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            width: 300px;
           }
           .characterSummary {
-            width: 50%;
             padding: 0px 10px 0px 10px;
+            width: 50%;
           }
           .txtSummary {
             font-size: 1.2rem;
           }
+
+          // TWEETS:
           .tweetsWrapper {
-            outline: green solid 2px;
-            width: 50px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+            margin: 0px 0px 50px 30px;
+            width: 90%;
           }
-          @media screen and (max-width: 900px) {
+          .tweet {
+            background-color: #ffb703;
+            border-radius: 5px;
+            box-shadow: #ffb703 1.95px 1.95px 2.6px;
+            font-size: 20px;
+            margin: 5px;
+            padding: 0px 10px 5px 10px;
+          }
+          .tweetCreatedAt {
+            font-weight: 600;
+            margin-bottom: 10px;
+          }
+          @media screen and (max-width: 1000px) {
             article {
               grid-template-columns: 1fr;
+            }
+            .tweetsWrapper {
+              margin-left: 5px;
+            }
+            .characterCard {
+              width: 90%;
+            }
+            .tweet {
+              width: 100%;
             }
           }
         `}
@@ -135,5 +178,25 @@ const Character = () => {
     </>
   );
 };
+
+export async function getServerSideProps() {
+  const token = process.env.BEARER_TOKEN;
+  const res = await fetch(
+    "https://api.twitter.com/2/tweets/search/recent?query=%22Babylon%205%22&tweet.fields=created_at,text&media.fields=preview_image_url&user.fields=location,username&place.fields=country",
+    {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      mode: "no-cors",
+    }
+  );
+
+  const data = await res.json();
+
+  return {
+    props: { data },
+  };
+}
 
 export default Character;
