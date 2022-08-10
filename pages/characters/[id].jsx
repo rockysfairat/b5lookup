@@ -50,6 +50,60 @@ const Character = ({ data }) => {
     }
   }
 
+  function displayTweets() {
+    if (data.data) {
+      return data.data?.map(({ id, created_at, text }) => (
+        <>
+          <Link href={`https://twitter.com/i/web/status/${id}`}>
+            <div className="tweet">
+              <p className="tweetCreatedAt">
+                {created_at.replace("T", " - ").slice(-24, -5)}
+              </p>{" "}
+              <p>{text}</p>
+            </div>
+          </Link>
+          <style jsx>{`
+            .tweet {
+              background-color: #ffb703;
+              border-radius: 5px;
+              box-shadow: #ffb703 1.95px 1.95px 2.6px;
+              font-size: 20px;
+              margin: 5px;
+              padding: 0px 10px 5px 10px;
+            }
+            .tweetCreatedAt {
+              font-weight: 600;
+              margin-bottom: 10px;
+            }
+          `}</style>
+        </>
+      ));
+    } else {
+      return (
+        <>
+          <h2 className="noTweets">
+            No recent tweets about this character. Sorry :(
+          </h2>
+          <style jsx>{`
+            .noTweets {
+              color: #fff;
+              outline: #fff solid 3px;
+              padding: 10px;
+              border-radius: 10px;
+              width: fit-content;
+              margin-left: 5px;
+            }
+            @media screen and (max-width: 1000px) {
+              .noTweets {
+                margin: 30px 0px 0px 10px;
+              }
+            }
+          `}</style>
+        </>
+      );
+    }
+  }
+
   useEffect(() => {
     isTheCharacterMain();
     console.log(data); // DELETE ME!!!!!!!!!!!!!!!!!!
@@ -83,16 +137,11 @@ const Character = ({ data }) => {
           </div>
         </div>
         <div className="tweetsWrapper">
-          {data.data.map(({ id, created_at, text }) => (
-            <Link href={`https://twitter.com/i/web/status/${id}`}>
-              <div className="tweet">
-                <p className="tweetCreatedAt">
-                  {created_at.replace("T", " - ").slice(-24, -5)}
-                </p>{" "}
-                <p>{text}</p>
-              </div>
-            </Link>
-          ))}
+          {displayTweets()}
+          <aside>
+            Due to the Twitter API limitation only the most recent tweets could
+            be displayed!
+          </aside>
         </div>
       </article>
       <style jsx>
@@ -133,8 +182,6 @@ const Character = ({ data }) => {
           .txtSummary {
             font-size: 1.2rem;
           }
-
-          // TWEETS:
           .tweetsWrapper {
             cursor: pointer;
             display: flex;
@@ -143,17 +190,13 @@ const Character = ({ data }) => {
             margin: 0px 0px 50px 30px;
             width: 90%;
           }
-          .tweet {
-            background-color: #ffb703;
-            border-radius: 5px;
-            box-shadow: #ffb703 1.95px 1.95px 2.6px;
-            font-size: 20px;
-            margin: 5px;
-            padding: 0px 10px 5px 10px;
-          }
-          .tweetCreatedAt {
-            font-weight: 600;
-            margin-bottom: 10px;
+          aside {
+            color: #fff;
+            outline: #fff solid 2px;
+            padding: 10px;
+            border-radius: 10px;
+            width: fit-content;
+            margin: 15px 0px 25px 5px;
           }
           @media screen and (max-width: 1000px) {
             article {
@@ -167,6 +210,10 @@ const Character = ({ data }) => {
             }
             .tweet {
               width: 100%;
+            }
+            aside {
+              margin-left: 10px;
+              font-size: 18px;
             }
           }
         `}
