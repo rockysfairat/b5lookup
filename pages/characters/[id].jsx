@@ -5,14 +5,11 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 // React components:
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const Character = ({ data }) => {
   const router = useRouter();
   const { id } = router.query;
-
-  const [char, setChar] = useState("");
-  console.log(char);
 
   // Extracting the local character data:
   const character = characters.filter((char) => {
@@ -55,8 +52,7 @@ const Character = ({ data }) => {
 
   useEffect(() => {
     isTheCharacterMain();
-    setChar(character[0].searchQuery);
-    console.log(data);
+    console.log(data); // DELETE ME!!!!!!!!!!!!!!!!!!
   }, []);
 
   return (
@@ -179,10 +175,20 @@ const Character = ({ data }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
+  const { id } = context.params;
   const token = process.env.BEARER_TOKEN;
+
+  // Extracting the search query from the character obj:
+  const char = characters.filter((char) => {
+    return char.id == id;
+  });
+  const query = char[0].searchQuery;
+
+  console.log(query);
+
   const res = await fetch(
-    "https://api.twitter.com/2/tweets/search/recent?query=%22Babylon%205%22&tweet.fields=created_at,text&media.fields=preview_image_url&user.fields=location,username&place.fields=country",
+    `https://api.twitter.com/2/tweets/search/recent?query=${query}%20lang%3Aen%20%22Babylon%205%22&tweet.fields=author_id,created_at,id,lang,source,text`,
     {
       method: "GET",
       headers: {
