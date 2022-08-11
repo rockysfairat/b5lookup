@@ -1,6 +1,6 @@
-const Character = (name, race, playedByLink, playedByName, isMain) => {
+const Character = (id, name, race, playedByLink, playedByName, isMain) => {
   return (
-    <section>
+    <section key={id}>
       <article>
         <h2>{name}</h2>
         <p>{race}</p>

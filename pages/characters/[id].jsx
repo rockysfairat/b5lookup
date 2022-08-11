@@ -80,33 +80,60 @@ const Character = ({ data }) => {
       ));
     } else {
       return (
-        <>
+        <div className="noTweetsWrapper">
           <h2 className="noTweets">
-            No recent tweets about this character. Sorry :(
+            No recent tweets about this character. Sorry
           </h2>
+          <p>:(</p>
           <style jsx>{`
+            .noTweetsWrapper {
+              display: grid;
+              grid-template-columns: 490px 100px;
+              margin: 0px;
+            }
             .noTweets {
               color: #fff;
               outline: #fff solid 3px;
-              padding: 10px;
+              padding: 10px 20px 10px 10px;
               border-radius: 10px;
               width: fit-content;
-              margin-left: 5px;
+              margin: 15px 0px 15px 5px;
+            }
+            p {
+              width: 35px;
+              height: 35px;
+              background-color: #353535;
+              border: #fff dashed 2px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0px;
+              color: #fff;
+              position: relative;
+              z-index: 2;
+              top: 40px;
+              right: 20px;
+              font-weight: 600;
+              font-size: 18px;
             }
             @media screen and (max-width: 1000px) {
               .noTweets {
-                margin: 30px 0px 0px 10px;
+                margin: 30px 0px 15px 10px;
+              }
+              p {
+                top: 50px;
+                right: 15px;
               }
             }
           `}</style>
-        </>
+        </div>
       );
     }
   }
 
   useEffect(() => {
     isTheCharacterMain();
-    console.log(data); // DELETE ME!!!!!!!!!!!!!!!!!!
   }, []);
 
   return (
@@ -182,6 +209,7 @@ const Character = ({ data }) => {
           .txtSummary {
             font-size: 1.2rem;
           }
+          // TWEETS AREA:
           .tweetsWrapper {
             cursor: pointer;
             display: flex;
@@ -231,8 +259,6 @@ export async function getServerSideProps(context) {
     return char.id == id;
   });
   const query = char[0].searchQuery;
-
-  console.log(query);
 
   const res = await fetch(
     `https://api.twitter.com/2/tweets/search/recent?query=${query}%20lang%3Aen%20%22Babylon%205%22&tweet.fields=author_id,created_at,id,lang,source,text`,
