@@ -34,7 +34,7 @@ const Character = ({ data }) => {
     if (data.data) {
       return data.data?.map(({ id, created_at, text }) => (
         <div key={id}>
-          <Link href={`https://twitter.com/i/web/status/${id}`}>
+          <Link href={`https://twitter.com/i/web/status/${id}`} passHref>
             <div className={styles.tweet}>
               <p className={styles.tweetCreatedAt}>
                 {created_at.replace("T", " - ").slice(-24, -5)}
@@ -58,7 +58,7 @@ const Character = ({ data }) => {
 
   useEffect(() => {
     isTheCharacterMain();
-  }, []);
+  });
 
   return (
     <div key={character[0].id}>

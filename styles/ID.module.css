@@ -97,6 +97,27 @@
   font-weight: 600;
   font-size: 18px;
 }
+/* Is the char main section: */
+.isMain {
+  background-color: #ffb703;
+  color: #023047;
+  height: 90px;
+  left: 20px;
+  margin: 0;
+  position: absolute;
+  top: 110px;
+  width: 90px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.isMain p {
+  margin: 0;
+  word-wrap: break-word;
+  text-align: center;
+}
 
 @media screen and (max-width: 1000px) {
   .article {
@@ -126,27 +147,6 @@
   .smiley {
     top: 50px;
     right: 15px;
-  }
-  /* Is the char main section: */
-  .isMain {
-    background-color: #ffb703;
-    color: #023047;
-    height: 90px;
-    left: 20px;
-    margin: 0;
-    position: absolute;
-    top: 110px;
-    width: 90px;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-  }
-  .isMain p {
-    margin: 0;
-    word-wrap: break-word;
-    text-align: center;
   }
 }
 

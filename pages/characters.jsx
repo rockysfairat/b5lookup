@@ -11,7 +11,7 @@ const Characters = () => {
     <>
       <section className={styles.section}>
         {characters.map(({ id, name, photo, race, playedByName, isMain }) => (
-          <Link href={`/characters/${id}`} key={id}>
+          <Link href={`/characters/${id}`} key={id} passHref>
             <article className={styles.article} key={id}>
               <div className={styles.imgWrapper}>
                 {isMain ? (

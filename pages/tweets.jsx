@@ -7,7 +7,11 @@ const Links = ({ data }) => {
       <article>
         <div className="tweetsWrapper">
           {data.data.map(({ id, created_at, text }) => (
-            <Link href={`https://twitter.com/i/web/status/${id}`}>
+            <Link
+              href={`https://twitter.com/i/web/status/${id}`}
+              passHref
+              key={id}
+            >
               <div className="tweet">
                 <p className="tweetCreatedAt">
                   {created_at.replace("T", " - ").slice(-24, -5)}

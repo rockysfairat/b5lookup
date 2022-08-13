@@ -11,7 +11,7 @@ const Links = () => {
     <div>
       <section className={styles.section}>
         {b5links.map(({ id, title, url, img }) => (
-          <Link href={url}>
+          <Link href={url} passHref key={id}>
             <div key={id} className={styles.itemWrapper}>
               <div className={styles.imgWrapper}>
                 <Image
