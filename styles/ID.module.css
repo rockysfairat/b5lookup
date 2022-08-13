@@ -1,0 +1,183 @@
+.article {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 100%;
+}
+.characterCard {
+  background: #219ebc;
+  border-radius: 5px;
+  box-shadow: rgba(18, 167, 247, 0.45) 1.95px 1.95px 2.6px;
+  display: flex;
+  height: fit-content;
+  justify-content: space-evenly;
+  margin-left: 10px;
+  margin-top: 5px;
+  padding: 10px;
+  width: 700px;
+}
+.imgWrapper {
+  align-items: center;
+  border-radius: 50%;
+  border: solid 5px #023047;
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+}
+.characterSummary {
+  padding: 0px 10px 0px 10px;
+  width: 50%;
+}
+.txtSummary {
+  font-size: 1.2rem;
+}
+
+/* TWEETS AREA: */
+.tweetsWrapper {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  margin: 0px 0px 50px 30px;
+  width: 90%;
+}
+.aside {
+  color: #fff;
+  outline: #fff solid 2px;
+  padding: 10px;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 15px 0px 25px 5px;
+}
+.tweet {
+  background-color: #ffb703;
+  border-radius: 5px;
+  box-shadow: #ffb703 1.95px 1.95px 2.6px;
+  font-size: 20px;
+  margin: 5px;
+  padding: 5px 10px 5px 10px;
+}
+.tweetCreatedAt {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* When there are no tweets: */
+.noTweetsWrapper {
+  display: grid;
+  grid-template-columns: 490px 100px;
+  margin: 0px;
+}
+.noTweets {
+  color: #fff;
+  outline: #fff solid 3px;
+  padding: 10px 20px 10px 10px;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 15px 0px 15px 5px;
+}
+.smiley {
+  width: 35px;
+  height: 35px;
+  background-color: #353535;
+  border: #fff dashed 2px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  top: 40px;
+  right: 20px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1000px) {
+  .article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .characterCard {
+    width: 95%;
+    margin: 0px;
+  }
+  .tweetsWrapper {
+    margin: 0px;
+    width: 98%;
+  }
+
+  .tweet {
+    width: inherit;
+  }
+  .aside {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  .noTweets {
+    margin: 30px 0px 15px 10px;
+  }
+  .smiley {
+    top: 50px;
+    right: 15px;
+  }
+  /* Is the char main section: */
+  .isMain {
+    background-color: #ffb703;
+    color: #023047;
+    height: 90px;
+    left: 20px;
+    margin: 0;
+    position: absolute;
+    top: 110px;
+    width: 90px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .isMain p {
+    margin: 0;
+    word-wrap: break-word;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .article {
+    margin-top: 70px;
+  }
+  .characterCard {
+    width: 90%;
+  }
+  .imgWrapper {
+    width: 100px;
+    height: 100px;
+  }
+  .isMain {
+    width: 55px;
+    height: 55px;
+    font-size: 12px;
+    left: 10px;
+  }
+  .characterSummary {
+    padding: 0px;
+    width: 60%;
+  }
+  .characterSummary h2 {
+    font-size: 1.1rem;
+  }
+  .characterSummary p {
+    margin: 5px 0px 5px 0px;
+  }
+  .txtSummary {
+    font-size: 1rem;
+  }
+}

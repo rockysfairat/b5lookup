@@ -1,0 +1,12 @@
+.footer {
+  background: #219ebc;
+  bottom: 0;
+  height: 20px;
+  position: fixed;
+  width: 100%;
+}
+
+.p {
+  font-size: 1rem;
+  margin: 0px;
+}
