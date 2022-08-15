@@ -3,6 +3,7 @@ import { b5links } from "../data/data";
 // Next components:
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 // CSS:
 import styles from "../styles/Links.module.css";
 
@@ -10,6 +11,9 @@ const Links = () => {
   return (
     <div>
       <section className={styles.section}>
+        <Head>
+          <title>B5: Links</title>
+        </Head>
         {b5links.map(({ id, title, url, img }) => (
           <Link href={url} passHref key={id}>
             <div key={id} className={styles.itemWrapper}>

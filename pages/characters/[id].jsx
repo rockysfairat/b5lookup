@@ -4,6 +4,7 @@ import { characters } from "../../data/data";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 // React components:
 import { useEffect } from "react";
 // CSS:
@@ -62,6 +63,9 @@ const Character = ({ data }) => {
 
   return (
     <div key={character[0].id}>
+      <Head>
+        <title>B5: {character[0].name}</title>
+      </Head>
       <article className={styles.article}>
         <div className={styles.characterCard}>
           {isTheCharacterMain()}

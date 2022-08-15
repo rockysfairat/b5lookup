@@ -2,10 +2,14 @@
 import styles from "../styles/Home.module.css";
 // Next components:
 import Link from "next/link";
+import Head from "next/head";
 
 const Home = () => {
   return (
     <div className={styles.wrapper}>
+      <Head>
+        <title>Babylon 5 tweets lookup</title>
+      </Head>
       <section className={styles.section}>
         <h2>
           The Babylon Project was our last, best hope for peace. A

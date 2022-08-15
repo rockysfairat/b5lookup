@@ -1,6 +1,7 @@
 // Next components:
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 // Data:
 import { characters } from "../data/data";
 // CSS:
@@ -10,6 +11,9 @@ const Characters = () => {
   return (
     <>
       <section className={styles.section}>
+        <Head>
+          <title>B5: Characters</title>
+        </Head>
         {characters.map(({ id, name, photo, race, playedByName, isMain }) => (
           <Link href={`/characters/${id}`} key={id} passHref>
             <article className={styles.article} key={id}>

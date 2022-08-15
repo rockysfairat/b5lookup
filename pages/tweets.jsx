@@ -1,9 +1,13 @@
 // Next components:
 import Link from "next/link";
+import Head from "next/head";
 
 const Links = ({ data }) => {
   return (
     <>
+      <Head>
+        <title>B5: Recent tweets</title>
+      </Head>
       <article>
         <div className="tweetsWrapper">
           {data.data.map(({ id, created_at, text }) => (
