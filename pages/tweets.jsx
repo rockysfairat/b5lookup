@@ -3,6 +3,7 @@ import Link from "next/link";
 import Head from "next/head";
 
 const Links = ({ tweets }) => {
+  console.log(tweets);
   return (
     <>
       <Head>
@@ -10,17 +11,17 @@ const Links = ({ tweets }) => {
       </Head>
       <article>
         <div className="tweetsWrapper">
-          {tweets.data.map(({ id, created_at, text }) => (
+          {tweets.data.map((tweet) => (
             <Link
-              href={`https://twitter.com/i/web/status/${id}`}
+              href={`https://twitter.com/i/web/status/${tweet.id}`}
               passHref
-              key={id}
+              key={tweet.id}
             >
               <div className="tweet">
                 <p className="tweetCreatedAt">
-                  {created_at.replace("T", " - ").slice(-24, -5)}
+                  {tweet.created_at.replace("T", " - ").slice(-24, -5)}
                 </p>{" "}
-                <p>{text}</p>
+                <p>{tweet.text}</p>
               </div>
             </Link>
           ))}
