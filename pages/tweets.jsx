@@ -65,7 +65,7 @@ const Links = ({ data }) => {
 };
 
 export async function getServerSideProps() {
-  const token = process.env.BEARER_TOKEN;
+  const token = process.env.NEXT_PUBLIC_BEARER_TOKEN;
   const res = await fetch(
     "https://api.twitter.com/2/tweets/search/recent?query=%22Babylon%205%22&tweet.fields=created_at,text&media.fields=preview_image_url&user.fields=location,username&place.fields=country",
     {
