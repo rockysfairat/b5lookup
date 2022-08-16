@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Head from "next/head";
 
-const Links = ({ data }) => {
+const Links = ({ tweets }) => {
   return (
     <>
       <Head>
@@ -10,7 +10,7 @@ const Links = ({ data }) => {
       </Head>
       <article>
         <div className="tweetsWrapper">
-          {data.data.map(({ id, created_at, text }) => (
+          {tweets.data.map(({ id, created_at, text }) => (
             <Link
               href={`https://twitter.com/i/web/status/${id}`}
               passHref
@@ -77,16 +77,16 @@ export async function getServerSideProps() {
     }
   );
 
-  const data = await res.json();
+  const tweets = await res.json();
 
-  if (!data) {
+  if (!tweets) {
     return {
       notFound: true,
     };
   }
 
   return {
-    props: { data },
+    props: { tweets },
   };
 }
 
