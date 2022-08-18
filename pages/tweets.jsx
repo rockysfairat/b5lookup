@@ -3,7 +3,6 @@ import Link from "next/link";
 import Head from "next/head";
 
 const Links = ({ tweets }) => {
-  console.log(tweets);
   return (
     <>
       <Head>
@@ -67,6 +66,11 @@ const Links = ({ tweets }) => {
 
 export async function getServerSideProps() {
   const token = process.env.NEXT_PUBLIC_BEARER_TOKEN;
+
+  if (!token) {
+    throw new Error("There's no key you fuck!");
+  }
+
   const res = await fetch(
     "https://api.twitter.com/2/tweets/search/recent?query=%22Babylon%205%22&tweet.fields=created_at,text&media.fields=preview_image_url&user.fields=location,username&place.fields=country",
     {
@@ -79,12 +83,6 @@ export async function getServerSideProps() {
   );
 
   const tweets = await res.json();
-
-  if (!tweets) {
-    return {
-      notFound: true,
-    };
-  }
 
   return {
     props: { tweets },
