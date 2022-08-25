@@ -105,7 +105,7 @@ const Character = ({ data }) => {
 
 export async function getServerSideProps(context) {
   const { id } = context.params;
-  const token = process.env.NEXT_PUBLIC_BEARER_TOKEN;
+  const token = process.env.BEARER_TOKEN;
 
   // Extracting the search query from the character obj:
   const char = characters.filter((char) => {

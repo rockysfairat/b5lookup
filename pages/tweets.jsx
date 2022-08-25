@@ -65,7 +65,7 @@ const Links = ({ tweets }) => {
 };
 
 export async function getServerSideProps() {
-  const token = process.env.NEXT_PUBLIC_BEARER_TOKEN;
+  const token = process.env.BEARER_TOKEN;
 
   if (!token) {
     throw new Error("There's no key you fuck!");
