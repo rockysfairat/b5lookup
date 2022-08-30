@@ -18,6 +18,9 @@ const App = ({ Component, pageProps }) => {
           property="og:image"
           content="http://raw.githubusercontent.com/rockysfairat/b5lookup/main/public/B5screenshot.jpg"
         />
+        <meta property="og:image:width" content="1200" />
+
+        <meta property="og:image:height" content="630" />
       </Head>
       <Component {...pageProps} />
     </Layout>
