@@ -9,17 +9,6 @@ const Home = () => {
     <div className={styles.wrapper}>
       <Head>
         <title>Babylon 5 tweets lookup</title>
-        <meta name="twitter:card" content="summary" />
-        <meta property="og:url" content="http://bylon5lookup.vercel.app/" />
-        <meta property="og:title" content="Babylon 5 tweets lookup" />
-        <meta
-          property="og:description"
-          content="Check up the latest tweets about the characters of Babylon 5 TV series!"
-        />
-        <meta
-          property="og:image"
-          content="http://raw.githubusercontent.com/rockysfairat/b5lookup/main/public/B5screenshot.jpg"
-        />
       </Head>
       <section className={styles.section}>
         <h2>
