@@ -21,6 +21,7 @@ const App = ({ Component, pageProps }) => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="author" content="Ålexander Yurchenko" />
+        <link rel="icon" href="/aliens.png" />
       </Head>
       <Component {...pageProps} />
     </Layout>
