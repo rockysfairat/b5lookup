@@ -370,4 +370,16 @@ export const b5links = [
     url: "https://www.jmsnews.com/messages/archive",
     img: "/images/JMS.png",
   },
+  {
+    id: "JMStwitter",
+    title: "J. Michael Straczynski's twitter",
+    url: "https://twitter.com/straczynski",
+    img: "/images/JMS_twitter.jpg",
+  },
+  {
+    id: "GreyPod",
+    title: "Grey 17 Babylon 5 Podcast",
+    url: "https://www.youtube.com/@Grey17Podcast",
+    img: "/images/greypod.jpg",
+  },
 ];
